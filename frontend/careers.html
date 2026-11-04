@@ -1,0 +1,2318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Careers at EMSTRAP | Build Technology That Saves Lives</title>
+
+<meta name="description" content="Join EMSTRAP and work on innovative emergency response technology. Explore internships and career opportunities in software engineering, AI and application development.">
+
+<meta name="theme-color" content="#071a33">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+/* =========================================
+   EMSTRAP CAREERS - GLOBAL STYLES
+========================================= */
+
+:root {
+    --navy: #071a33;
+    --dark: #0b2042;
+    --blue: #1268db;
+    --red: #ed171f;
+    --light: #f4f7fc;
+    --border: #e2e9f3;
+    --text: #142444;
+    --muted: #52627c;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+    background: white;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button, input, select, textarea {
+    font: inherit;
+}
+
+.container {
+    width: min(1180px, calc(100% - 48px));
+    margin: auto;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.15;
+    color: var(--navy);
+}
+
+.section {
+    padding: 55px 0;
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--red);
+    text-transform: uppercase;
+    letter-spacing: .7px;
+}
+
+.eyebrow::before {
+    content: "";
+    width: 25px;
+    height: 2px;
+    background: var(--red);
+}
+
+.highlight {
+    color: var(--red);
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 19px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 800;
+    transition: .25s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-red {
+    background: var(--red);
+    color: white;
+    box-shadow: 0 7px 18px rgba(237,23,31,.18);
+}
+
+.btn-red:hover {
+    background: #d70e17;
+}
+
+.btn-dark {
+    background: var(--navy);
+    color: white;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--navy);
+    color: var(--navy);
+}
+
+.btn-outline-white {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,.65);
+    color: white;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 66px;
+    background: rgba(255,255,255,.97);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--border);
+}
+
+.nav {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo img {
+    width: 140px;
+    height: 54px;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+
+.nav-links a {
+    font-size: 12px;
+    font-weight: 800;
+    white-space: nowrap;
+    position: relative;
+    transition: .2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--red);
+}
+
+.nav-links a.active::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    bottom: -12px;
+    left: 0;
+    width: 100%;
+    background: var(--red);
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.nav-buttons .btn {
+    padding: 12px 15px;
+    font-size: 11px;
+}
+
+.menu-toggle {
+    display: none;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--border);
+    background: white;
+    border-radius: 8px;
+    color: var(--navy);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.career-hero {
+    min-height: 255px;
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(246,249,255,.99) 0%,
+            rgba(246,249,255,.95) 32%,
+            rgba(246,249,255,.35) 58%,
+            rgba(246,249,255,.02) 100%
+        ),
+        url("images/careers/career-hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    max-width: 600px;
+    padding: 35px 0;
+}
+
+.hero-tag {
+    display: inline-block;
+    padding: 5px 11px;
+    border-radius: 30px;
+    background: #ffe8e9;
+    color: var(--red);
+    font-size: 11px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.career-hero h1 {
+    font-size: clamp(36px, 4vw, 49px);
+    font-weight: 800;
+    letter-spacing: -1.7px;
+}
+
+.hero-description {
+    max-width: 500px;
+    margin-top: 12px;
+    font-size: 13px;
+    line-height: 1.65;
+    color: var(--text);
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 19px;
+}
+
+/* =========================================
+   BENEFIT STRIP
+========================================= */
+
+.benefit-strip {
+    background: linear-gradient(90deg,#f4f7ff,#ffffff,#f4f7ff);
+    border-block: 1px solid var(--border);
+    padding: 19px 0;
+}
+
+.benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 0 20px;
+    border-right: 1px solid #b9c7da;
+}
+
+.benefit-item:first-child {
+    padding-left: 15px;
+}
+
+.benefit-item:last-child {
+    border: none;
+}
+
+.benefit-item i {
+    color: var(--navy);
+    font-size: 29px;
+    min-width: 34px;
+}
+
+.benefit-item h4 {
+    font-size: 13px;
+    margin-bottom: 3px;
+}
+
+.benefit-item p {
+    font-size: 11px;
+    line-height: 1.45;
+    color: var(--muted);
+}
+
+/* =========================================
+   WHY JOIN EMSTRAP
+========================================= */
+
+.why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr .8fr;
+    align-items: center;
+    gap: 28px;
+}
+
+.why-image {
+    position: relative;
+}
+
+.why-image img {
+    width: 100%;
+    height: 195px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.why-content h2 {
+    font-size: 29px;
+    margin: 12px 0;
+    letter-spacing: -.7px;
+}
+
+.why-content p {
+    font-size: 12px;
+    line-height: 1.7;
+    color: var(--muted);
+}
+
+.why-list {
+    border-left: 1px solid #c6d1df;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.why-list li {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.why-list i {
+    color: white;
+    background: var(--red);
+    border-radius: 50%;
+    width: 17px;
+    height: 17px;
+    display: grid;
+    place-items: center;
+    font-size: 9px;
+    flex-shrink: 0;
+}
+
+/* =========================================
+   INTERNS
+========================================= */
+
+.intern-section {
+    background: linear-gradient(110deg,#f5f8ff,#ffffff,#f4f7fd);
+    border-block: 1px solid #edf1f7;
+}
+
+.intern-layout {
+    display: grid;
+    grid-template-columns: .95fr 2.05fr;
+    gap: 35px;
+    align-items: center;
+}
+
+.intern-intro h2 {
+    font-size: 27px;
+    margin: 12px 0 8px;
+}
+
+.intern-intro p {
+    font-size: 12px;
+    line-height: 1.65;
+    color: var(--muted);
+    max-width: 280px;
+    margin-bottom: 14px;
+}
+
+.intern-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 13px;
+}
+
+.intern-card {
+    overflow: hidden;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    box-shadow: 0 5px 14px rgba(15,40,75,.06);
+    transition: .3s;
+}
+
+.intern-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(15,40,75,.13);
+}
+
+.intern-card img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.intern-info {
+    padding: 10px 12px;
+}
+
+.intern-info h3 {
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+.intern-info p {
+    font-size: 11px;
+    color: var(--muted);
+}
+
+/* =========================================
+   WHAT YOU WILL GAIN
+========================================= */
+
+.gain-layout {
+    display: grid;
+    grid-template-columns: .85fr 2.15fr;
+    gap: 35px;
+    align-items: center;
+}
+
+.gain-intro h2 {
+    font-size: 28px;
+    margin: 12px 0;
+}
+
+.gain-intro p {
+    font-size: 12px;
+    line-height: 1.7;
+    color: var(--muted);
+}
+
+.gain-grid {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 10px;
+}
+
+.gain-card {
+    min-height: 145px;
+    padding: 15px 10px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: linear-gradient(145deg,#fff,#f3f6fd);
+    text-align: center;
+    transition: .25s;
+}
+
+.gain-card:hover {
+    transform: translateY(-5px);
+    border-color: #b9c9e2;
+}
+
+.gain-card i {
+    color: #4838ff;
+    font-size: 27px;
+    margin-bottom: 11px;
+}
+
+.gain-card h3 {
+    font-size: 13px;
+    line-height: 1.3;
+    margin-bottom: 7px;
+}
+
+.gain-card p {
+    font-size: 10px;
+    line-height: 1.5;
+    color: var(--muted);
+}
+
+/* =========================================
+   OPEN POSITIONS + COMPANY CULTURE
+========================================= */
+
+.opportunities-section {
+    background: #fff;
+}
+
+.opportunity-layout {
+    display: grid;
+    grid-template-columns: .98fr 1.02fr;
+    gap: 38px;
+}
+
+.opportunities h2,
+.life-section h2 {
+    font-size: 27px;
+    margin: 10px 0 13px;
+}
+
+.role-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: 13px 0 16px;
+}
+
+.filter-btn {
+    padding: 7px 13px;
+    border: 1px solid #d5dfec;
+    border-radius: 7px;
+    background: #f5f7fb;
+    color: var(--navy);
+    font-size: 10px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: var(--navy);
+    border-color: var(--navy);
+    color: white;
+}
+
+.role-list {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.role-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: white;
+    transition: .2s;
+}
+
+.role-card:hover {
+    border-color: #a8bddb;
+    box-shadow: 0 5px 14px rgba(15,40,75,.07);
+}
+
+.role-card[hidden] {
+    display: none;
+}
+
+.role-main {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.role-icon {
+    width: 43px;
+    height: 43px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    background: #eef4ff;
+    border-radius: 10px;
+    color: var(--blue);
+    font-size: 19px;
+}
+
+.role-info h3 {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.role-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    font-size: 9px;
+    color: var(--muted);
+}
+
+.role-meta i {
+    color: var(--blue);
+}
+
+.apply-btn {
+    flex-shrink: 0;
+    background: white;
+    border: 1px solid #ff777c;
+    border-radius: 7px;
+    padding: 7px 11px;
+    color: var(--red);
+    font-size: 10px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.apply-btn:hover {
+    background: var(--red);
+    color: white;
+}
+
+/* LIFE AT EMSTRAP */
+
+.life-section {
+    border-left: 1px solid #c6d1df;
+    padding-left: 35px;
+}
+
+.life-section h2 span {
+    color: var(--red);
+}
+
+.life-images {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 9px;
+    height: 260px;
+}
+
+.life-main,
+.life-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 11px;
+}
+
+.life-side {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 9px;
+    min-height: 0;
+}
+
+.life-side img {
+    min-height: 0;
+}
+
+/* =========================================
+   BOTTOM CTA
+========================================= */
+
+.career-cta {
+    min-height: 210px;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5,24,52,.98) 0%,
+            rgba(5,24,52,.88) 45%,
+            rgba(5,24,52,.05) 100%
+        ),
+        url("images/careers/ambulance-city.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cta-content {
+    max-width: 570px;
+    padding: 35px 0;
+}
+
+.cta-content h2 {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 9px;
+}
+
+.cta-content p {
+    color: #dbe7f6;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    background: #071a33;
+    color: white;
+    padding: 35px 0 15px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1.2fr 1fr;
+    gap: 35px;
+    padding-bottom: 25px;
+}
+
+.footer-logo {
+    width: 145px;
+    height: 55px;
+    object-fit: contain;
+    object-position: left center;
+}
+
+.footer p {
+    font-size: 11px;
+    color: #c5d2e2;
+    line-height: 1.6;
+    margin-top: 10px;
+    max-width: 250px;
+}
+
+.footer h4 {
+    color: white;
+    font: 800 13px Inter,sans-serif;
+    margin: 9px 0 13px;
+}
+
+.footer a {
+    display: block;
+    color: #c5d2e2;
+    font-size: 11px;
+    margin-bottom: 9px;
+    transition: .2s;
+}
+
+.footer a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    padding-top: 14px;
+    border-top: 1px solid rgba(255,255,255,.2);
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    font-size: 10px;
+    color: #b8c5d7;
+}
+
+/* =========================================
+   APPLICATION MODAL
+========================================= */
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: rgba(3,14,30,.78);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-overlay.open {
+    display: flex;
+}
+
+.application-modal {
+    width: min(550px,100%);
+    max-height: 90vh;
+    overflow-y: auto;
+    background: white;
+    border-radius: 17px;
+    padding: 28px;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    right: 18px;
+    top: 15px;
+    width: 35px;
+    height: 35px;
+    background: #f0f3f8;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    color: var(--navy);
+}
+
+.application-modal h2 {
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+.application-modal > p {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 13px;
+}
+
+.form-group {
+    margin-bottom: 13px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 11px;
+    font-weight: 800;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #d6dfeb;
+    background: #f8faff;
+    border-radius: 8px;
+    outline: none;
+    font-size: 12px;
+    color: var(--text);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--blue);
+    background: white;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.modal-submit {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.form-notice {
+    font-size: 11px;
+    line-height: 1.5;
+    color: var(--muted);
+    margin-top: 12px;
+}
+
+.form-status {
+    font-size: 12px;
+    margin-top: 12px;
+    color: var(--red);
+}
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity .65s ease, transform .65s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media(prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    * {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+}
+
+/* =========================================
+   TABLET RESPONSIVENESS
+========================================= */
+
+@media(max-width:1050px) {
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .why-list {
+        grid-column: 1/-1;
+        border-left: none;
+        border-top: 1px solid var(--border);
+        padding: 18px 0 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .intern-layout,
+    .gain-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .intern-intro p {
+        max-width: 550px;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+========================================= */
+
+@media(max-width:760px) {
+
+    .header {
+        height: 68px;
+    }
+
+    .logo img {
+        width: 125px;
+    }
+
+    .menu-toggle {
+        display: grid;
+        place-items: center;
+    }
+
+    .nav {
+        position: relative;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 67px;
+        left: -24px;
+        right: -24px;
+        padding: 15px 25px 20px;
+        background: white;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 15px 25px rgba(0,0,0,.09);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 12px 0;
+        font-size: 13px;
+    }
+
+    .nav-links a.active::after {
+        display: none;
+    }
+
+    .nav-buttons .demo-btn {
+        display: none;
+    }
+
+    .nav-buttons .emergency-btn {
+        font-size: 0;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+    }
+
+    .nav-buttons .emergency-btn i {
+        font-size: 16px;
+    }
+
+    .career-hero {
+        min-height: 380px;
+        background-position: 65% center;
+    }
+
+    .career-hero h1 {
+        font-size: 39px;
+    }
+
+    .hero-content {
+        padding: 55px 0;
+    }
+
+    .benefit-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px 10px;
+    }
+
+    .benefit-item {
+        border: none;
+        padding: 5px;
+    }
+
+    .benefit-item i {
+        font-size: 23px;
+    }
+
+    .section {
+        padding: 42px 0;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .why-image img {
+        height: 260px;
+    }
+
+    .why-list {
+        grid-column: auto;
+        grid-template-columns: 1fr;
+    }
+
+    .intern-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .intern-card img {
+        height: 170px;
+    }
+
+    .gain-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .gain-card:last-child {
+        grid-column: 1/-1;
+    }
+
+    .opportunity-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .life-section {
+        border-left: none;
+        border-top: 1px solid var(--border);
+        padding: 30px 0 0;
+    }
+
+    .life-images {
+        height: 250px;
+    }
+
+    .career-cta {
+        min-height: 260px;
+        background-position: 65% center;
+    }
+
+    .cta-content h2 {
+        font-size: 27px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+}
+
+/* SMALL MOBILE */
+
+@media(max-width:450px) {
+
+    .container {
+        width: calc(100% - 32px);
+    }
+
+    .career-hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-description {
+        font-size: 12px;
+    }
+
+    .hero-actions .btn {
+        padding: 12px;
+        font-size: 10px;
+    }
+
+    .intern-card img {
+        height: 145px;
+    }
+
+    .intern-info h3 {
+        font-size: 12px;
+    }
+
+    .role-card {
+        padding: 9px 7px;
+    }
+
+    .role-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 15px;
+    }
+
+    .role-info h3 {
+        font-size: 10px;
+    }
+
+    .role-meta {
+        font-size: 8px;
+        gap: 5px;
+    }
+
+    .apply-btn {
+        padding: 7px;
+        font-size: 9px;
+    }
+
+    .life-images {
+        height: 210px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .application-modal {
+        padding: 22px 17px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .footer-brand {
+        grid-column: 1/-1;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header class="header">
+
+    <div class="container nav">
+
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="EMSTRAP Logo">
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html">About</a>
+
+            <a href="index.html#page-services">services</a>
+
+            <a href="careers.html" class="active">Careers</a>
+
+        </nav>
+
+        <div class="nav-buttons">
+
+           
+            <button class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Toggle navigation"
+                    aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<main>
+
+<!-- =========================================
+     HERO SECTION
+========================================= -->
+
+<section class="career-hero">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="hero-tag">
+                CAREERS AT EMSTRAP
+            </div>
+
+            <h1>
+                Build Technology
+                <br>
+                That <span class="highlight">Saves Lives.</span>
+            </h1>
+
+            <p class="hero-description">
+                Join a mission-driven team building intelligent,
+                connected emergency response solutions for a
+                safer and healthier India.
+            </p>
+
+            <div class="hero-actions">
+
+                <a href="#open-positions" class="btn btn-red">
+                    Explore Open Positions
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a href="#internship" class="btn btn-outline">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    Internship Program
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     BENEFIT STRIP
+========================================= -->
+
+<section class="benefit-strip">
+
+    <div class="container benefit-grid">
+
+        <div class="benefit-item">
+
+            <i class="fa-solid fa-bullseye"></i>
+
+            <div>
+                <h4>Real-World Impact</h4>
+                <p>Build solutions that save lives</p>
+            </div>
+
+        </div>
+
+        <div class="benefit-item">
+
+            <i class="fa-solid fa-people-group"></i>
+
+            <div>
+                <h4>Collaborative Team</h4>
+                <p>Work with passionate and talented people</p>
+            </div>
+
+        </div>
+
+        <div class="benefit-item">
+
+            <i class="fa-solid fa-rocket"></i>
+
+            <div>
+                <h4>Continuous Learning</h4>
+                <p>Learn, build and grow with mentorship</p>
+            </div>
+
+        </div>
+
+        <div class="benefit-item">
+
+            <i class="fa-solid fa-chart-column"></i>
+
+            <div>
+                <h4>Growth Opportunities</h4>
+                <p>Be part of a high-impact startup</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     WHY JOIN EMSTRAP
+========================================= -->
+
+<section class="section">
+
+    <div class="container why-grid">
+
+        <div class="why-image reveal">
+
+            <img
+                src="images/careers/team-working.jpg"
+                alt="EMSTRAP team collaborating"
+                loading="lazy"
+            >
+
+        </div>
+
+        <div class="why-content reveal">
+
+            <span class="eyebrow">WHY JOIN EMSTRAP</span>
+
+            <h2>
+                Be Part of a Mission
+                Bigger Than a Job.
+            </h2>
+
+            <p>
+                At EMSTRAP, you'll work on real-world challenges
+                in emergency response, healthcare, and public safety.
+                Bring your ideas into technology that creates
+                meaningful impact.
+            </p>
+
+        </div>
+
+        <ul class="why-list reveal">
+
+            <li>
+                <i class="fa-solid fa-check"></i>
+                Work on socially impactful products
+            </li>
+
+            <li>
+                <i class="fa-solid fa-check"></i>
+                Collaborate with industry and government stakeholders
+            </li>
+
+            <li>
+                <i class="fa-solid fa-check"></i>
+                Gain end-to-end product development exposure
+            </li>
+
+            <li>
+                <i class="fa-solid fa-check"></i>
+                Grow in a fast-paced startup environment
+            </li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     INTERNSHIP PROGRAM
+========================================= -->
+
+<section class="section intern-section" id="internship">
+
+    <div class="container intern-layout">
+
+        <div class="intern-intro reveal">
+
+            <span class="eyebrow">OUR INTERNS</span>
+
+            <h2>
+                EMSTRAP
+                <br>
+                Internship Program
+            </h2>
+
+            <p>
+                A hands-on learning experience where students
+                contribute to live projects, solve real product
+                challenges, and gain industry-ready skills.
+            </p>
+
+            <a href="#open-positions" class="btn btn-dark">
+                Meet Our Interns
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+        <div class="intern-grid">
+
+
+           
+            <article class="intern-card reveal">
+
+                <img
+                    src="images/mohit.jpeg"
+                    alt="Mohit K"
+                    loading="lazy"
+                >
+
+                <div class="intern-info">
+                    <h3>Mohit K</h3>
+                    <p>Backend Intern</p>
+                </div>
+
+            </article>
+
+            <article class="intern-card reveal">
+
+                <img
+                    src="images/janhavi.jpeg"
+                    alt="Janhavi S"
+                    loading="lazy"
+                >
+
+                <div class="intern-info">
+                    <h3>Janhavi S</h3>
+                    <p>AI/ML Intern</p>
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     WHAT YOU WILL GAIN
+========================================= -->
+
+<section class="section">
+
+    <div class="container gain-layout">
+
+        <div class="gain-intro reveal">
+
+            <span class="eyebrow">WHAT YOU WILL GAIN</span>
+
+            <h2>
+                A Launchpad for
+                <span class="highlight">Your Career.</span>
+            </h2>
+
+            <p>
+                More than an internship or job, it's an opportunity
+                to learn, build, and grow with real ownership.
+            </p>
+
+        </div>
+
+        <div class="gain-grid">
+
+            <article class="gain-card reveal">
+
+                <i class="fa-solid fa-laptop"></i>
+
+                <h3>Real Project Experience</h3>
+
+                <p>
+                    Work on live products used by real users.
+                </p>
+
+            </article>
+
+            <article class="gain-card reveal">
+
+                <i class="fa-solid fa-people-group"></i>
+
+                <h3>Mentorship & Guidance</h3>
+
+                <p>
+                    Learn directly from founders and core team members.
+                </p>
+
+            </article>
+
+            <article class="gain-card reveal">
+
+                <i class="fa-solid fa-award"></i>
+
+                <h3>Skill Development</h3>
+
+                <p>
+                    Build technical, product, and teamwork skills.
+                </p>
+
+            </article>
+
+            <article class="gain-card reveal">
+
+                <i class="fa-regular fa-star"></i>
+
+                <h3>Recognition & Certificate</h3>
+
+                <p>
+                    Get an internship certificate and appreciation.
+                </p>
+
+            </article>
+
+            <article class="gain-card reveal">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <h3>Career Opportunity</h3>
+
+                <p>
+                    High-performing interns may get future opportunities.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     OPEN POSITIONS AND LIFE AT EMSTRAP
+========================================= -->
+
+<section class="section opportunities-section"
+         id="open-positions">
+
+    <div class="container opportunity-layout">
+
+        <!-- OPEN POSITIONS -->
+
+        <div class="opportunities reveal">
+
+            <span class="eyebrow">OPEN POSITIONS</span>
+
+            <h2>
+                Explore Opportunities
+                <br>
+                at <span class="highlight">EMSTRAP.</span>
+            </h2>
+
+            <div class="role-filters">
+
+                <button class="filter-btn active"
+                        data-filter="all">
+                    All Roles
+                </button>
+
+                <button class="filter-btn"
+                        data-filter="internship">
+                    Internship
+                </button>
+
+                <button class="filter-btn"
+                        data-filter="fulltime">
+                    Full-time
+                </button>
+
+                <button class="filter-btn"
+                        data-filter="hybrid">
+                    Hybrid
+                </button>
+
+            </div>
+
+            <div class="role-list">
+
+                <!-- ROLE 1 -->
+
+                <article class="role-card"
+                         data-category="fulltime hybrid">
+
+                    <div class="role-main">
+
+                        <div class="role-icon">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+
+                        <div class="role-info">
+
+                            <h3>Backend Developer</h3>
+
+                            <div class="role-meta">
+                                <span>Full-time</span>
+                                <span>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    Bengaluru (Hybrid)
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <button class="apply-btn"
+                            onclick="openApplication('Backend Developer')">
+                        Apply Now
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </article>
+
+
+                <!-- ROLE 2 -->
+
+                <article class="role-card"
+                         data-category="fulltime hybrid">
+
+                    <div class="role-main">
+
+                        <div class="role-icon">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+
+                        <div class="role-info">
+
+                            <h3>Full-Stack Developer</h3>
+
+                            <div class="role-meta">
+                                <span>Full-time</span>
+                                <span>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    Bengaluru (Hybrid)
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <button class="apply-btn"
+                            onclick="openApplication('Full-Stack Developer')">
+                        Apply Now
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </article>
+
+
+                <!-- ROLE 3 -->
+
+                <article class="role-card"
+                         data-category="fulltime hybrid">
+
+                    <div class="role-main">
+
+                        <div class="role-icon">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                        </div>
+
+                        <div class="role-info">
+
+                            <h3>Application Developer (Android / iOS)</h3>
+
+                            <div class="role-meta">
+                                <span>Full-time</span>
+                                <span>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    Bengaluru (Hybrid)
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <button class="apply-btn"
+                            onclick="openApplication('Application Developer')">
+                        Apply Now
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </article>
+
+
+                <!-- ROLE 4 -->
+
+                <article class="role-card"
+                         data-category="fulltime hybrid">
+
+                    <div class="role-main">
+
+                        <div class="role-icon">
+                            <i class="fa-solid fa-microchip"></i>
+                        </div>
+
+                        <div class="role-info">
+
+                            <h3>AI / ML Developer</h3>
+
+                            <div class="role-meta">
+                                <span>Full-time</span>
+                                <span>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    Bengaluru (Hybrid)
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <button class="apply-btn"
+                            onclick="openApplication('AI / ML Developer')">
+                        Apply Now
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </article>
+
+
+                <!-- ROLE 5 -->
+
+                <article class="role-card"
+                         data-category="internship hybrid">
+
+                    <div class="role-main">
+
+                        <div class="role-icon">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+
+                        <div class="role-info">
+
+                            <h3>Software Development Intern</h3>
+
+                            <div class="role-meta">
+                                <span>Internship</span>
+                                <span>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    Bengaluru (Hybrid)
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <button class="apply-btn"
+                            onclick="openApplication('Software Development Intern')">
+                        Apply Now
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </article>
+
+            </div>
+
+        </div>
+
+
+        <!-- LIFE AT EMSTRAP -->
+
+        <div class="life-section reveal">
+
+            <span class="eyebrow">LIFE AT EMSTRAP</span>
+
+            <h2>
+                A Culture of
+                <span>Innovation, Collaboration and Impact.</span>
+            </h2>
+
+            <div class="life-images">
+
+                <img
+                    class="life-main"
+                    src="images/careers/team-collaboration.jpg"
+                    alt="EMSTRAP team collaboration"
+                    loading="lazy"
+                >
+
+                <div class="life-side">
+
+                    <img
+                        src="images/careers/team-discussion.jpg"
+                        alt="EMSTRAP team discussion"
+                        loading="lazy"
+                    >
+
+                    <img
+                        src="images/careers/team-group.jpg"
+                        alt="EMSTRAP team"
+                        loading="lazy"
+                    >
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     BOTTOM CALL TO ACTION
+========================================= -->
+
+<section class="career-cta">
+
+    <div class="container">
+
+        <div class="cta-content">
+
+            <h2>
+                Ready to Build the Next
+                Generation of Emergency Response?
+            </h2>
+
+            <p>
+                Join EMSTRAP and be part of a team that uses
+                technology to save lives and build safer communities.
+            </p>
+
+            <a href="#open-positions" class="btn btn-red">
+                Explore Open Positions
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+
+                <img src="logo.png"
+                     alt="EMSTRAP"
+                     class="footer-logo">
+
+                <p>
+                    Transforming emergency response through
+                    smart technology and real-time coordination.
+                    Saving lives, one second at a time.
+                </p>
+
+            </div>
+
+            <div>
+
+                <h4>Quick Links</h4>
+
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="#open-positions">Careers</a>
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+            <div>
+
+                <h4>Our Products</h4>
+
+                <a href="connect.html">EMSTRAP Connect</a>
+                <a href="ride.html">EMSTRAP Ride</a>
+                <a href="shield.html">EMSTRAP Shield</a>
+                <a href="command.html">EMSTRAP Command</a>
+
+            </div>
+
+            <div>
+
+                <h4>Connect With Us</h4>
+
+                <a href="https://www.linkedin.com/company/emstrap/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    LinkedIn
+                </a>
+
+                <a href="https://www.instagram.com/emstrap_official/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Instagram
+                </a>
+
+                <a href="contact.html">
+                    Partnerships
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 EMSTRAP Pvt. Ltd. All rights reserved.
+            </span>
+
+            <span>
+                Building technology that saves lives.
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================
+     APPLICATION MODAL
+========================================= -->
+
+<div class="modal-overlay" id="applicationModal">
+
+    <div class="application-modal">
+
+        <button class="modal-close"
+                onclick="closeApplication()"
+                aria-label="Close application form">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <span class="eyebrow">JOIN OUR TEAM</span>
+
+        <h2>Apply at EMSTRAP</h2>
+
+        <p>
+            Share your details and portfolio with our recruitment team.
+        </p>
+
+        <form id="applicationForm">
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label for="appName">Full Name *</label>
+
+                    <input
+                        type="text"
+                        id="appName"
+                        name="name"
+                        placeholder="Your full name"
+                        required
+                    >
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="appEmail">Email Address *</label>
+
+                    <input
+                        type="email"
+                        id="appEmail"
+                        name="email"
+                        placeholder="Your email"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label for="appPhone">Phone Number *</label>
+
+                    <input
+                        type="tel"
+                        id="appPhone"
+                        name="phone"
+                        placeholder="+91"
+                        required
+                    >
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="appRole">Position *</label>
+
+                    <select id="appRole" name="role" required>
+
+                        <option value="">Select position</option>
+
+                        <option>Backend Developer</option>
+
+                        <option>Full-Stack Developer</option>
+
+                        <option>Application Developer</option>
+
+                        <option>AI / ML Developer</option>
+
+                        <option>Software Development Intern</option>
+
+                        <option>General Application</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="appResume">
+                    Resume / Portfolio Link *
+                </label>
+
+                <input
+                    type="url"
+                    id="appResume"
+                    name="resume"
+                    placeholder="https://drive.google.com/..."
+                    required
+                >
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="appMessage">
+                    Why do you want to join EMSTRAP?
+                </label>
+
+                <textarea
+                    id="appMessage"
+                    name="message"
+                    rows="3"
+                    placeholder="Tell us a little about yourself..."
+                ></textarea>
+
+            </div>
+
+            <button type="submit" class="btn btn-red modal-submit">
+                Submit Application
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
+
+            <p class="form-notice">
+                Application submission is not connected to a backend yet.
+                Connect this form to your recruitment API or email service
+                before accepting real applications.
+            </p>
+
+            <p class="form-status" id="formStatus" aria-live="polite"></p>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
+<script>
+
+/* MOBILE NAVIGATION */
+
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+
+menuToggle.addEventListener('click', function() {
+
+    const isOpen = navLinks.classList.toggle('open');
+
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+
+    menuToggle.innerHTML = isOpen
+        ? '<i class="fa-solid fa-xmark"></i>'
+        : '<i class="fa-solid fa-bars"></i>';
+
+});
+
+navLinks.querySelectorAll('a').forEach(link => {
+
+    link.addEventListener('click', () => {
+
+        navLinks.classList.remove('open');
+
+        menuToggle.setAttribute('aria-expanded', 'false');
+
+        menuToggle.innerHTML =
+            '<i class="fa-solid fa-bars"></i>';
+
+    });
+
+});
+
+
+/* ROLE FILTERING */
+
+const filterButtons = document.querySelectorAll('.filter-btn');
+const roleCards = document.querySelectorAll('.role-card');
+
+filterButtons.forEach(button => {
+
+    button.addEventListener('click', () => {
+
+        const filter = button.dataset.filter;
+
+        filterButtons.forEach(btn => {
+            btn.classList.remove('active');
+        });
+
+        button.classList.add('active');
+
+        roleCards.forEach(card => {
+
+            const categories = card.dataset.category.split(' ');
+
+            card.hidden =
+                filter !== 'all' &&
+                !categories.includes(filter);
+
+        });
+
+    });
+
+});
+
+
+/* APPLICATION MODAL */
+
+const applicationModal =
+    document.getElementById('applicationModal');
+
+const applicationForm =
+    document.getElementById('applicationForm');
+
+const appRole =
+    document.getElementById('appRole');
+
+function openApplication(role) {
+
+    applicationModal.classList.add('open');
+
+    document.body.style.overflow = 'hidden';
+
+    appRole.value = role;
+
+    document.getElementById('formStatus').textContent = '';
+
+    setTimeout(() => {
+        document.getElementById('appName').focus();
+    }, 100);
+
+}
+
+function closeApplication() {
+
+    applicationModal.classList.remove('open');
+
+    document.body.style.overflow = '';
+
+}
+
+applicationModal.addEventListener('click', function(event) {
+
+    if (event.target === applicationModal) {
+        closeApplication();
+    }
+
+});
+
+document.addEventListener('keydown', function(event) {
+
+    if (event.key === 'Escape') {
+        closeApplication();
+    }
+
+});
+
+
+/* FORM SUBMISSION SAFETY */
+
+applicationForm.addEventListener('submit', function(event) {
+
+    event.preventDefault();
+
+    document.getElementById('formStatus').textContent =
+        'The application form is currently in preview mode. Please connect the backend before accepting submissions.';
+
+});
+
+
+/* SCROLL REVEAL */
+
+const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add('visible');
+
+                observer.unobserve(entry.target);
+
+            }
+
+        });
+
+    },
+    {
+        threshold: 0.12
+    }
+);
+
+document.querySelectorAll('.reveal').forEach(element => {
+
+    revealObserver.observe(element);
+
+});
+
+</script>
+
+</body>
+</html>
