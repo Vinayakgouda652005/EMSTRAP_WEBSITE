@@ -246,7 +246,7 @@ h1, h2, h3, h4 {
             rgba(246,249,255,.35) 58%,
             rgba(246,249,255,.02) 100%
         ),
-        url("images/careers/career-hero.jpg");
+        url("images/career-hero.png");
 
     background-size: cover;
     background-position: center;
@@ -1383,7 +1383,7 @@ h1, h2, h3, h4 {
         <div class="why-image reveal">
 
             <img
-                src="images/careers/team-working.jpg"
+                src="images/team-working.png"
                 alt="EMSTRAP team collaborating"
                 loading="lazy"
             >
@@ -1437,14 +1437,16 @@ h1, h2, h3, h4 {
 </section>
 
 
+
 <!-- =========================================
-     INTERNSHIP PROGRAM
+     INTERNSHIP PROGRAM — CONTINUOUS MARQUEE
 ========================================= -->
 
 <section class="section intern-section" id="internship">
 
     <div class="container intern-layout">
 
+        <!-- Left Introduction -->
         <div class="intern-intro reveal">
 
             <span class="eyebrow">OUR INTERNS</span>
@@ -1468,39 +1470,76 @@ h1, h2, h3, h4 {
 
         </div>
 
-        <div class="intern-grid">
+        <!-- Right: Moving Intern Cards -->
+        <div class="intern-marquee-wrapper">
 
+            <div class="intern-marquee" id="internMarquee">
 
-           
-            <article class="intern-card reveal">
+                <!-- Original Cards -->
+                <div class="intern-marquee-track">
 
-                <img
-                    src="images/mohit.jpeg"
-                    alt="Mohit K"
-                    loading="lazy"
-                >
+                    <article class="intern-card">
+                        <img src="images/mohit.jpeg"
+                             alt="Mohit K"
+                             loading="lazy">
+                        <div class="intern-info">
+                            <h3>Mohit K</h3>
+                            <p>Backend Intern</p>
+                        </div>
+                    </article>
 
-                <div class="intern-info">
-                    <h3>Mohit K</h3>
-                    <p>Backend Intern</p>
+                    <article class="intern-card">
+                        <img src="images/janhavi.jpeg"
+                             alt="Janhavi S"
+                             loading="lazy">
+                        <div class="intern-info">
+                            <h3>Janhavi S</h3>
+                            <p>AI/ML Intern</p>
+                        </div>
+                    </article>
+
+                    <article class="intern-card">
+                        <img src="images/shivani.jpeg"
+                             alt="Shivani"
+                             loading="lazy">
+                        <div class="intern-info">
+                            <h3>Shivani</h3>
+                            <p>Frontend Intern</p>
+                        </div>
+                    </article>
+
                 </div>
 
-            </article>
+                <!-- Duplicate Cards for Seamless Loop -->
+                <div class="intern-marquee-track" aria-hidden="true">
 
-            <article class="intern-card reveal">
+                    <article class="intern-card">
+                        <img src="images/mohit.jpeg" alt="" loading="lazy">
+                        <div class="intern-info">
+                            <h3>Mohit K</h3>
+                            <p>Backend Intern</p>
+                        </div>
+                    </article>
 
-                <img
-                    src="images/janhavi.jpeg"
-                    alt="Janhavi S"
-                    loading="lazy"
-                >
+                    <article class="intern-card">
+                        <img src="images/janhavi.jpeg" alt="" loading="lazy">
+                        <div class="intern-info">
+                            <h3>Janhavi S</h3>
+                            <p>AI/ML Intern</p>
+                        </div>
+                    </article>
 
-                <div class="intern-info">
-                    <h3>Janhavi S</h3>
-                    <p>AI/ML Intern</p>
+                    <article class="intern-card">
+                        <img src="images/shivani.jpeg" alt="" loading="lazy">
+                        <div class="intern-info">
+                            <h3>Shivani</h3>
+                            <p>Frontend Intern</p>
+                        </div>
+                    </article>
+
                 </div>
 
-            </article>
+            </div>
 
         </div>
 
@@ -1508,6 +1547,124 @@ h1, h2, h3, h4 {
 
 </section>
 
+<style>
+
+/* Marquee container */
+.intern-marquee-wrapper {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    position: relative;
+    padding: 12px 0 24px;
+}
+
+/* Moving track */
+.intern-marquee {
+    display: flex;
+    width: max-content;
+    animation: internScroll 22s linear infinite;
+    will-change: transform;
+}
+
+/* Two identical groups */
+.intern-marquee-track {
+    display: flex;
+    align-items: stretch;
+    gap: 22px;
+    padding-right: 22px;
+}
+
+/* Individual intern card */
+.intern-card {
+    width: 230px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 5px 18px rgba(15, 23, 42, 0.07);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.intern-card img {
+    width: 100%;
+    height: 260px;
+    display: block;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 0.5s ease;
+}
+
+.intern-info {
+    padding: 16px;
+    background: #ffffff;
+}
+
+.intern-info h3 {
+    color: #0f172a;
+    font-size: 17px;
+    font-weight: 800;
+    margin: 0 0 5px;
+}
+
+.intern-info p {
+    color: #64748b;
+    font-size: 13px;
+    margin: 0;
+}
+
+/* Card hover */
+.intern-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 16px 35px rgba(15, 23, 42, 0.14);
+    border-color: #2563eb;
+}
+
+.intern-card:hover img {
+    transform: scale(1.04);
+}
+
+/* Pause the complete carousel on hover */
+.intern-marquee-wrapper:hover .intern-marquee {
+    animation-play-state: paused;
+}
+
+/* Continuous right-to-left movement */
+@keyframes internScroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+
+    .intern-marquee {
+        animation-duration: 18s;
+    }
+
+    .intern-card {
+        width: 190px;
+    }
+
+    .intern-card img {
+        height: 220px;
+    }
+
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .intern-marquee {
+        animation: none;
+    }
+}
+
+</style>
 
 <!-- =========================================
      WHAT YOU WILL GAIN
@@ -1848,7 +2005,7 @@ h1, h2, h3, h4 {
 
                 <img
                     class="life-main"
-                    src="images/careers/team-collaboration.jpg"
+                    src="images/team-collaboration.png"
                     alt="EMSTRAP team collaboration"
                     loading="lazy"
                 >
@@ -1856,13 +2013,13 @@ h1, h2, h3, h4 {
                 <div class="life-side">
 
                     <img
-                        src="images/careers/team-discussion.jpg"
+                        src="images/team-discussion.png"
                         alt="EMSTRAP team discussion"
                         loading="lazy"
                     >
 
                     <img
-                        src="images/careers/team-group.jpg"
+                        src="images/team-group.jpeg"
                         alt="EMSTRAP team"
                         loading="lazy"
                     >
